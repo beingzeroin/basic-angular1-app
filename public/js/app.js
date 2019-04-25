@@ -2,6 +2,10 @@ var app = angular.module('bzApp', ['ngRoute']);
 
 app.config(function($routeProvider) {
     $routeProvider
+    .when("/", {
+        templateUrl : "/partials/home.html",
+        controller: 'homeCtrl'
+      })
     .when("/login", {
       templateUrl : "/partials/login.html",
       controller: 'loginCtrl'
@@ -38,6 +42,10 @@ app.controller('registerCtrl', function($scope, $http) {
 });
 
 app.controller('dashboardCtrl', function($scope, $http) {
+
+});
+
+app.controller('homeCtrl', function($scope, $http) {
 
 });
 
